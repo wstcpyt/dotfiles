@@ -16,6 +16,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
+Plugin 'jpalardy/vim-slime'
+Plugin 'exu/pgsql.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -76,4 +78,9 @@ let g:syntastic_check_on_wq = 0
 
 " airline configuration
 set lazyredraw
+
+"vim slime configuration
+let g:slime_target = "tmux"
+" .pgsql syntex highlighting
+set syntax=pgsql
 

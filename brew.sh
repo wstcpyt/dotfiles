@@ -36,5 +36,6 @@ brew install vim --override-system-vi
 brew install git
 brew install tree
 brew install CMake
+brew install tmux
 # Remove outdated versions from the cellar.
 brew cleanup
