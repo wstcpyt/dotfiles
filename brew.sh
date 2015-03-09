@@ -33,9 +33,12 @@ brew install wget --with-iri
 brew install vim --override-system-vi
 
 # Install other useful binaries.
+brew install caskroom/cask/brew-cask
 brew install git
 brew install tree
 brew install CMake
 brew install tmux
+brew install reattach-to-user-namespace
+
 # Remove outdated versions from the cellar.
 brew cleanup
