@@ -38,7 +38,7 @@ brew install git
 brew install tree
 brew install CMake
 brew install tmux
-brew install reattach-to-user-namespace
-
+brew install reattach-to-user-eamespace
+brew cask install mactex
 # Remove outdated versions from the cellar.
 brew cleanup
