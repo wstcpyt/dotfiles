@@ -95,10 +95,7 @@ set grepprg=grep\ -nH\ $*
 " " 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
 " " The following changes the default filetype back to 'tex':
 let g:tex_flavor='latex'
-let g:Tex_CompileRule_pdf = 'pdflatex --synctex=-1 -src-specials -interaction=nonstopmode -file-line-error-style $*'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_MultipleCompileFormats='pdf,bib,pdf'
-let g:Tex_ViewRule_pdf =  'SumatraPDF -reuse-instance '
+let g:Tex_MultipleCompileFormats='pdf'
 
 
 " spell check
