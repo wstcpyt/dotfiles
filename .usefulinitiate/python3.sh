@@ -1,8 +1,7 @@
 # install python3 using brew
 brew install python3
-brew install python
+sudo easy_install pip
 #virtualenvwrapper with Python 3
-pip install virtualenv
-pip install virtualenvwrapper
-brew unlink python
-
+sudo pip install virtualenv
+sudo pip install virtualenvwrapper
+mkdir -p ~/.virtualenvs

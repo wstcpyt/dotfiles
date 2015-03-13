@@ -18,6 +18,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 Plugin 'jpalardy/vim-slime'
 Plugin 'exu/pgsql.vim'
+Plugin 'SirVer/ultisnips'
 Plugin 'vim-latex/vim-latex'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -67,6 +68,12 @@ set mouse=a
 set noerrorbells
 " Show the cursor position
 set ruler
+"YouCompleteMe configuration
+let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
+let g:ycm_use_ultisnips_completer = 1 " Default 1, just ensure
+let g:ycm_seed_identifiers_with_syntax = 1 " Completion for programming language's keyword
+let g:ycm_complete_in_comments = 1 " Completion in comments
+let g:ycm_complete_in_strings = 1 " Completion in string
 " Syntastic setting
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -78,12 +85,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " airline configuration
-set lazyredraw
+" set lazyredraw
 
 "vim slime configuration
 let g:slime_target = "tmux"
 " .pgsql syntex highlighting
-set syntax=pgsql
+" set syntax=pgsql
 
 "vim-latex configuration
 " IMPORTANT: grep will sometimes skip displaying the file name if you
@@ -101,3 +108,8 @@ let g:Tex_MultipleCompileFormats='pdf'
 " spell check
 set spell spelllang=en_us
 
+"Ultisnips configuration
+let g:UltiSnipsExpandTrigger       = "<c-j>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
+let g:UltiSnipsListSnippets        = "<c-k>" "List possible snippets based on current file
